@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Localized Flexbox Alignment -->
+    <header class="main-header">
+        <div class="logo">MyPortfolio</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-toggle" class="theme-btn">🌓 Toggle Theme</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero-section">
+        <h1>Advanced CSS3 & Responsive Architecture</h1>
+        <p>Crafting pixel-perfect, highly responsive digital experiences.</p>
+    </section>
+
+    <!-- Projects Section with 2D CSS Grid -->
+    <main class="portfolio-container">
+        <h2>My Selected Projects</h2>
+        <section class="projects-grid">
+            <article class="project-card">
+                <h3>Project One</h3>
+                <p>Built with CSS Grid and Flexbox for precise layouts.</p>
+            </article>
+            <article class="project-card">
+                <h3>Project Two</h3>
+                <p>Fully responsive architecture following mobile-first design.</p>
+            </article>
+            <article class="project-card">
+                <h3>Project Three</h3>
+                <p>Dynamic dark and light theme integration using CSS variables.</p>
+            </article>
+            <article class="project-card">
+                <h3>Project Four</h3>
+                <p>Optimized performance and fluid typography.</p>
+            </article>
+        </section>
+    </main>
+
+        <!-- New Contact Section to show deep Flexbox implementation -->
+    <section id="contact" class="contact-section">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Let's Connect</h2>
+        <form class="contact-form" onsubmit="event.preventDefault();">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple script to toggle dynamic theme variables
+        const toggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        toggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+        });
+    </script>
+</body>
+</html>
